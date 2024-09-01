@@ -1,0 +1,451 @@
+:root {
+  --primary-color: #458ff6;
+  --light-black: rgba(31, 21, 52, 0.5);
+  --black: #1f1534;
+  --white: #fff;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Mulish", "Poppins", sans-serif;
+}
+
+/* utility classes */
+.d-flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.d-oflex {
+  display: flex;
+}
+
+.justify-content {
+  justify-content: center;
+}
+
+.align-items {
+  align-items: center;
+}
+
+.space-between {
+  justify-content: space-between;
+}
+
+.margin-top {
+  margin-top: 1.5rem;
+}
+
+.btn {
+  padding: 0.7rem 1.6rem 0.75rem;
+  margin-top: 2rem;
+  display: inline-block;
+  color: var(--primary-color);
+  border: 1.5px solid var(--primary-color);
+  border-radius: 2rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.blue-btn {
+  background-color: var(--primary-color);
+  color: var(--white);
+}
+
+.section-heading {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 2.3rem;
+  position: relative;
+}
+.section-heading::after {
+  content: "";
+  position: absolute;
+  top: 130%;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 1px;
+  width: 80px;
+  background-color: var(--black);
+}
+
+.section-para {
+  text-align: center;
+  color: var(--light-black);
+  /* margin-top: 1.5rem; */
+}
+
+.learn-more {
+  display: block;
+}
+
+.width-50per {
+  width: 50%;
+}
+.section-heading-style {
+  text-align: left;
+  width: 350px;
+}
+/*########## common CSS ############*/
+html {
+  scroll-behavior: smooth;
+}
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style-type: none;
+}
+
+header,
+section {
+  padding: 1.5rem 5rem;
+  max-width: 1800px;
+  width: 100%;
+}
+
+/*########### common CSS End ##########*/
+
+/* ############ Header Starts ############## */
+header #logo {
+  height: 40px;
+}
+header nav ul {
+  gap: 2.5rem;
+}
+
+header nav ul a.active {
+  color: var(--black);
+  font-weight: bold;
+}
+
+header nav ul a {
+  color: var(--light-black);
+  font-weight: 500;
+  transition: all 0.3s ease;
+  font-size: 1.05rem;
+}
+
+header nav ul a:hover {
+  color: var(--primary-color);
+}
+header #menu-btn {
+  font-weight: 500;
+  font-size: 1.3rem;
+  display: none;
+}
+/* ############ Header Ends ############## */
+
+/* ############ Hero Section Start ############## */
+#hero {
+  gap: 4rem;
+  padding-top: 5rem;
+  position: relative;
+  overflow: hidden;
+}
+
+#hero::before {
+  content: "";
+  position: absolute;
+  top: 3rem;
+  left: -1rem;
+  height: 100px;
+  width: 100px;
+  background-image: url("./img/dots.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+#left-div h1 {
+  font-size: 3rem;
+  width: 450px;
+}
+
+#left-div p {
+  color: var(--light-black);
+}
+
+#left-div a {
+  display: inline-block;
+}
+#right-div #hero-img {
+  width: 90%;
+  float: right;
+}
+/* ############ Hero Section End ############## */
+
+/* ############ our-services Section Start ############## */
+#our-services {
+  position: relative;
+  overflow: hidden;
+}
+
+#our-services::before {
+  content: "";
+  position: absolute;
+  top: 0rem;
+  left: 0;
+  height: 800px;
+  width: 1200px;
+  background-image: url("./img/our-service-background-img.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  z-index: -1;
+}
+
+#service-boxes-container {
+  padding: 4rem 0;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(200px, 1fr));
+  gap: 2rem;
+}
+
+#our-services .service-box {
+  background-color: var(--white);
+  border-radius: 0.4rem;
+  padding: 2.5rem 2rem;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.1);
+  width: 100%;
+}
+
+#our-services .service-box img {
+  height: 4rem;
+}
+#our-services .service-box h4 {
+  font-size: 1.3rem;
+  margin: 1.5rem 0 1rem 0;
+}
+#our-services .service-box p {
+  text-align: left;
+  font-size: 1rem;
+  color: var(--light-black);
+}
+/* ############ our-services Section End ############## */
+
+/* ########### Leading healthcare providers Start ############ */
+#Leading-healthcare-providers {
+  gap: 4rem;
+}
+
+#Leading-healthcare-providers #Leading-healthcare-providers-img {
+  width: 90%;
+  float: left;
+}
+
+#Leading-healthcare-providers #right-div p {
+  margin-top: 4rem;
+  text-align: left;
+}
+#Leading-healthcare-providers .section-heading::after {
+  top: 130%;
+  left: 0;
+  transform: translateX(5%);
+  height: 1px;
+  width: 60px;
+  background-color: var(--black);
+}
+
+/* ########### Leading healthcare providers End ############ */
+/* ########### Download our mobile apps start ############ */
+#Download-our-mobile-apps {
+  gap: 4rem;
+}
+#Download-our-mobile-apps #Download-our-mobile-apps-img {
+  width: 90%;
+  float: left;
+}
+#Download-our-mobile-apps #left-div p {
+  margin-top: 4rem;
+  text-align: left;
+}
+
+#Download-our-mobile-apps .section-heading {
+  width: 300px;
+  font-size: 2rem;
+  position: relative;
+}
+
+#Download-our-mobile-apps .section-heading::after {
+  top: 130%;
+  left: 0;
+  transform: translateX(5%);
+  height: 1px;
+  width: 60px;
+  background-color: var(--black);
+}
+/* ########### Download our mobile apps end ############ */
+/* ########### Customer saying start ############ */
+#background {
+  background-image: linear-gradient(45deg, #67c3f3, #5a98f2);
+  color: var(--white);
+  border-radius: 0.4rem;
+  padding: 2rem;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+#background #container {
+  gap: 4rem;
+}
+/* ########### Customer saying start end ############ */
+
+/* ########### Responsive Codes ############ */
+@media only screen and (max-width: 1330px) {
+  .btn {
+    padding: 0.5rem 1.4rem 0.6rem;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+  }
+}
+
+@media only screen and (max-width: 1067px) {
+  #hero,
+  #Leading-healthcare-providers,
+  #Leading-healthcare-providers {
+    gap: 1rem;
+  }
+}
+
+@media only screen and (max-width: 980px) {
+  header,
+  section {
+    padding: 1.5rem 3.5rem;
+  }
+  header #top-nav {
+    display: none;
+  }
+  header #menu-btn {
+    display: inline;
+  }
+
+  #hero {
+    margin-bottom: 1rem;
+  }
+  #hero #left-div h1 {
+    font-size: 2.6rem;
+    width: 350px;
+  }
+
+  #our-services {
+    margin-bottom: 1rem;
+    margin-top: 0;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  #hero,
+  #Leading-healthcare-providers,
+  #Leading-healthcare-providers {
+    gap: 0.5rem;
+  }
+  #service-boxes-container {
+    grid-template-columns: repeat(2, minmax(200px, 1fr));
+  }
+}
+
+@media only screen and (max-width: 740px) {
+  header,
+  section {
+    padding: 1.5rem 3rem;
+  }
+}
+
+@media only screen and (max-width: 620px) {
+  .section-heading {
+    font-size: 1.7rem;
+  }
+  #hero #left-div {
+    width: 100%;
+    text-align: center;
+  }
+  #hero #left-div h1 {
+    font-size: 2.4rem;
+    margin: 0 auto;
+  }
+
+  #hero #left-div p {
+    margin-top: 1rem;
+  }
+
+  #hero #right-div {
+    display: none;
+  }
+
+  #our-services a {
+    margin-top: 0;
+  }
+  #Leading-healthcare-providers #left-div {
+    display: none;
+  }
+  #Leading-healthcare-providers #right-div {
+    width: 100%;
+  }
+  #Download-our-mobile-apps #left-div h1,
+  #Leading-healthcare-providers #right-div h1 {
+    text-align: center;
+    width: 100%;
+  }
+  #Download-our-mobile-apps #left-div p,
+  #Leading-healthcare-providers #right-div p {
+    text-align: center;
+    width: 100%;
+  }
+  #Download-our-mobile-apps #left-div .section-heading::after,
+  #Leading-healthcare-providers #right-div .section-heading::after {
+    top: 130%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  #Download-our-mobile-apps #left-div .learn-more,
+  #Leading-healthcare-providers #right-div .learn-more {
+    display: flex;
+  }
+  #Download-our-mobile-apps #right-div {
+    display: none;
+  }
+  #Download-our-mobile-apps #left-div {
+    width: 100%;
+  }
+  #Download-our-mobile-apps #left-div h1 {
+    font-size: 1.7rem;
+  }
+}
+
+@media only screen and (max-width: 580px) {
+  header,
+  section {
+    padding: 1.5rem 2rem;
+  }
+
+  header #logo {
+    height: 35px;
+  }
+  #service-boxes-container {
+    grid-template-columns: repeat(1, minmax(auto, 1fr));
+  }
+}
+
+@media only screen and (max-width: 470px) {
+  #hero #left-div h1 {
+    font-size: 2.2rem;
+  }
+
+  #our-services {
+    margin-top: 0;
+  }
+}
+
+@media only screen and (max-width: 425px) {
+  header,
+  section {
+    padding: 1.5rem;
+  }
+  #hero #left-div h1 {
+    width: 100%;
+  }
+}
