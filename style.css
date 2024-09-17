@@ -22,6 +22,9 @@
   display: flex;
 }
 
+.dir-col {
+  flex-direction: column;
+}
 .justify-content {
   justify-content: center;
 }
@@ -112,7 +115,8 @@ ul {
 }
 
 header,
-section {
+section,
+footer {
   padding: 1.5rem 5rem;
   max-width: 1800px;
   width: 100%;
@@ -436,6 +440,51 @@ header #menu-btn {
 }
 
 /* ############ article end ##############  */
+
+/* ################# Footer Starts ################## */
+
+footer {
+  background: linear-gradient(180deg, #67c3f3, #5a98f2);
+}
+
+footer > div {
+  width: 100%;
+  padding: 4rem 6rem;
+}
+footer #left-div p {
+  color: #ffffffcc;
+}
+
+footer img {
+  margin-bottom: 1rem;
+}
+
+footer > div:first-child p:nth-child(2) {
+  margin-bottom: 2rem;
+}
+
+footer #right-div {
+  gap: 4rem;
+}
+footer #right-div ul h4 {
+  color: var(--white);
+  font-size: 1.1rem;
+}
+footer #right-div ul li {
+  margin-top: 1rem;
+  white-space: nowrap;
+  /* color: var(--white); */
+}
+
+footer #right-div ul a {
+  color: #ffffffcc;
+}
+
+footer > p {
+  display: none;
+}
+/* ################# Footer Ends ################## */
+
 /* ########### Responsive Codes ############ */
 @media only screen and (max-width: 1330px) {
   .btn {
@@ -443,6 +492,14 @@ header #menu-btn {
     font-size: 1rem;
     font-weight: 500;
     transition: all 0.3s ease;
+  }
+  footer > div {
+    padding: 4rem 5rem;
+  }
+}
+@media only screen and (max-width: 1235px) {
+  footer > div {
+    padding: 4rem 2rem;
   }
 }
 
@@ -452,11 +509,31 @@ header #menu-btn {
   #Leading-healthcare-providers {
     gap: 1rem;
   }
+  footer {
+    flex-direction: column;
+    gap: 5rem;
+  }
+
+  footer #left-div {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    padding-bottom: 0;
+  }
+
+  footer #right-div {
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding-top: 0;
+  }
 }
 
 @media only screen and (max-width: 980px) {
   header,
-  section {
+  section,
+  footer {
     padding: 1.5rem 3.5rem;
   }
   header #top-nav {
@@ -509,7 +586,8 @@ header #menu-btn {
 
 @media only screen and (max-width: 740px) {
   header,
-  section {
+  section,
+  footer {
     padding: 1.5rem 3rem;
   }
   .section-heading-style {
@@ -602,7 +680,8 @@ header #menu-btn {
 
 @media only screen and (max-width: 580px) {
   header,
-  section {
+  section,
+  footer {
     padding: 1.5rem 2rem;
   }
 
@@ -611,6 +690,15 @@ header #menu-btn {
   }
   #service-boxes-container {
     grid-template-columns: repeat(1, minmax(auto, 1fr));
+  }
+
+  footer #right-div {
+    flex-direction: column;
+  }
+  footer > p {
+    display: flex;
+    justify-content: center;
+    color: hsla(0, 0%, 100%, 0.6);
   }
 }
 
@@ -630,7 +718,8 @@ header #menu-btn {
 
 @media only screen and (max-width: 425px) {
   header,
-  section {
+  section,
+  footer {
     padding: 1.5rem;
   }
   #hero #left-div h1 {
